@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="app" dark="1">
+<head>
+  <script type="text/javascript" src="/lib/crypto-js.js"></script>
+</head>
+<body class="col aim om bg" view="rows">
+  <h1>Javascript Password</h1>
+  <h2>Set and check password</h2>
+  <form id="mycheckpasswordform" method="POST">
+    <input name="new_password" placeholder="enter password here">
+    <button>ok</button>
+  </form>
+  <p>Javascript code</p>
+  <code>
+    <pre>
+      <script type="text/javascript" src="/lib/crypto-js.js"></script>
+    </pre>
+  </code>
+  <pre>
+    <code id="result">
+    </code>
+  </pre>
+  <script>
+
+  mysetpasswordform.onsubmit = function (event) {
+    mysetpasswordform.password_encoded.value = CryptoJS.SHA256(mysetpasswordform.password.value);
+    // console.log(mysetpasswordform.password_encoded.value);
+    // return false;
+  }
+
+  mycheckpasswordform.onsubmit = function (event) {
+    // CryptoJS.AES.encrypt("Message", "Secret Passphrase").toString())
+
+  }
+
+  mychatencryption.onsubmit = function (event) {
+
+  }
+
+  mychatdecription.onsubmit = function (event) {
+
+  }
+
+  </script>
+
+
+  <h1>PHP Password</h1>
+  <h2>PHP Set password</h2>
+  <form id="php_set_password" method="POST" target="php_frame" action="set_password.php">
+    <input name="new_password" placeholder="enter password here">
+    <button>ok</button>
+  </form>
+  <code>
+    <pre>
+      $new_password = $_POST['new_password'];
+      $password_encoded = password_hash ( $new_password, PASSWORD_DEFAULT );
+      setcookie("password_encoded", $password_encoded, time()+3600);  /* expire in 1 hour */
+      echo "password_encoded = $password_encoded";
+    </pre>
+  </code>
+  <h2>PHP Check password</h2>
+  <form id="php_check_password" method="POST" target="php_frame" action="check_password.php">
+    <input name="password" placeholder="enter password here">
+    <button>ok</button>
+  </form>
+  <code>
+    <pre>
+      $password_encoded = $_COOKIE['password_encoded'];
+      $password = $_POST['password'];
+      $password_ok = password_verify ( $password, $password_encoded );
+      $password_encoded = password_hash ( $_POST['new_password'], PASSWORD_DEFAULT );
+      echo $password_ok ? "Password OK" : "Password Fault";
+    </pre>
+  </code>
+  <iframe name="php_frame" style="width:100%"></iframe>
+
+
+</body>
+</html>
