@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>JavaScript SPA AIM Tutorial</title>
+  <link rel="shortcut icon" href="https://aliconnect.nl/favicon.png">
+
+  <link rel="stylesheet" type="text/css" href="https://aliconnect.nl/v1/api/css/web_debug.css">
+
+  <script type="text/javascript" src="https://aliconnect.nl/v1/api/js/aim_debug.js"
+          ws-url="wss://aliconnect.nl:444"
+          translate="nl"
+          client-url="https://aliconnect.nl/api/"
+          libraries=""
+          scope1="name email"
+          callback="init"
+  ></script>
+</head>
+
+<body>
+  <div>
+    <button onclick="signIn()">login</button>
+    <button onclick="signOut()">logout</button>
+    <span id="username"></span>
+  </div>
+  <div>
+    <button onclick="signInCustomer()">login customer</button>
+  </div>
+  <div>
+    <button onclick="requestDataFromCustomer()">request data from customer 265090</button>
+  </div>
+  <main id="main"></main>
+
+  <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container">
+      <a href="/" class="navbar-brand">Javascript SPA Graph Tutorial</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul id="authenticated-nav" class="navbar-nav mr-auto"></ul>
+        <ul class="navbar-nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link" href="https://developer.microsoft.com/graph/docs/concepts/overview" target="_blank">
+              <i class="fas fa-external-link-alt mr-1"></i>Docs
+            </a>
+          </li>
+          <li id="account-nav" class="nav-item"></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-container" role="main" class="container">
+
+  </main> -->
+
+  <!-- AIM -->
+  <!-- <script src="config.js"></script> -->
+  <!-- <script src="timezones.js"></script>
+  <script src="ui.js"></script>
+  <script src="graph.js"></script> -->
+  <script src="auth.js"></script>
+</body>
+</html>

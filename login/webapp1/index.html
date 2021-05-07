@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>App</title>
+  <link rel="stylesheet" type="text/css" href="https://aliconnect.nl/v1/api/css/aim_debug.css"
+        crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="https://aliconnect.nl/v1/api/js/aim_debug.js"
+          ws-url="wss://aliconnect.nl:444"
+          libraries="auth"
+          scope1="name email"
+          callback="init"
+  ></script>
+</head>
+<body>
+  <button id="aLogin" onclick="$().prompt('login')">Login</button>
+  <button id="aLogout" onclick="$().logout()">Logout</button>
+  <script src="config.js"></script>
+  <script src="ui.js"></script>
+  <script src="auth.js"></script>
+  <script src="graph.js"></script>
+</body>
+</html>

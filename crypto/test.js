@@ -1,4 +1,9 @@
 (function () {
+
+  var hash = CryptoJS.SHA3("Message");
+
+
+
   console.log(encrypted = CryptoJS.AES.encrypt("Message", "Secret Passphrase").toString())
   console.log(decrypted = CryptoJS.AES.decrypt(encrypted, "Secret Passphrase").toString(CryptoJS.enc.Utf8));
   console.log(decrypted = CryptoJS.AES.decrypt("U2FsdGVkX1+affa/qUmE81tUitlJwm5temEZMzuvJK0=", "Secret Passphrase").toString(CryptoJS.enc.Utf8));
