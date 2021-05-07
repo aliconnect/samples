@@ -9,12 +9,22 @@
 
   <script type="text/javascript"
           src="../../api/js/aim_debug.js"
+          libraries=""
   ></script>
 </head>
 <script>
   $().on('ready', event => {
     $(document.body).append(
-      $('div').text('drop file here')
+      $('div')
+      .text('drop file here')
+      .on('dragover', event => {
+        event.preventDefault();
+      })
+      .on('drop', event => {
+        event.preventDefault();
+        console.log(event);
+        return false;
+      })
     )
   });
 </script>
